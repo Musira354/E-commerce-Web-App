@@ -1,6 +1,7 @@
 {
   "name": "unfade",
   "version": "0.1.0",
+  "private": false,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@emotion/react": "^11.9.3",
@@ -38,6 +39,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
