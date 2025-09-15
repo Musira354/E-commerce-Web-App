@@ -24,10 +24,10 @@ const LoginNavbar = (props) => {
   return (
     <Container fluid style={{ padding: '0' }}>
       <Navbar className="LoginNavbar" expand={'lg'}>
-        <Navbar.Brand href="#home">
-          
-          <div color="black" onClick={() => Navigate('login')}>{Logo}</div>
+        <Navbar.Brand className="name ml-8" href="#home">
+          <div className="font-bold bg-red-500 text-white mr-4 pt-4">UNFADED</div>
         </Navbar.Brand>
+
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -42,7 +42,7 @@ const LoginNavbar = (props) => {
             </NavLink>
             <NavLink to="/cart">
               <Badge badgeContent={state.length} overlap="circular" color="success" sx={{
-                '& .MuiBadge-badge':{
+                '& .MuiBadge-badge': {
                   'background-color': '#000'
                 }
               }} >

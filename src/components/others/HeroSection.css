@@ -1,0 +1,50 @@
+/* HeroSection.css */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    height: 100%;
+  }
+  
+  .carousel-item img.hero-image {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .main-heading {
+    font-size: calc(1.5rem + 1vw);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .more-link {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+  }
+  
+  .more-link:hover {
+    border-bottom: 2px solid white;
+  }
+  
+  .loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

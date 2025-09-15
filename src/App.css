@@ -166,10 +166,48 @@ body {
 
 /* Hero Section */
 
+/* Default (desktop / large screens) */
 .HeroSection {
   min-height: 100vh;
   position: relative;
 }
+
+/* Tablets (portrait & landscape) */
+@media (max-width: 1024px) {
+  .HeroSection {
+    min-height: auto;   /* so it doesn’t force fullscreen height */
+  }
+
+  .HeroSection .ourServices {
+    width: 90%;         /* not full edge-to-edge */
+    margin: 0 auto;     /* center it */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .HeroSection {
+    min-height: auto;
+  }
+
+  .HeroSection .ourServices {
+    width: 100%;        /* full width for small screens */
+    border-radius: 6px; /* softer corners for mobile */
+  }
+}
+
+/* Very small screens (like older phones) */
+@media (max-width: 480px) {
+  .HeroSection {
+    min-height: auto;
+
+  }
+
+  .HeroSection .ourServices {
+    font-size: 12px;   /* reduce font size */
+  }
+}
+
 
 .HeroSection .carousel-indicators {
   display: none;
@@ -214,6 +252,8 @@ body {
   width: 80%;
   padding: 3em;
   border-radius: 0 6em 0 0;
+  border: 1px solid #f6f6f6;      /* light border */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* shadow */
 }
 
 .HeroSection .HeroContents {
@@ -321,12 +361,12 @@ body {
 }
 
 .HeroSection .carousel-control-next {
-  top: 84%;
+  top: 54%;
   right: 8.5%;
 }
 
 .HeroSection .carousel-control-prev {
-  top: 84%;
+  top: 54%;
   left: unset;
   right: calc(10% + 55px);
   background-color: #ffffff30;
@@ -841,6 +881,7 @@ svg {
   .LoginNavbar .navbar-brand {
     position: unset;
     margin-top: -1.6em;
+    margin-left: 1.6rem;
   }
 }
 @media (max-width: 992px) {
@@ -889,7 +930,7 @@ svg {
   .navbar-light .navbar-nav .nav-link {
     padding-bottom: 0;
   }
-  .HeroSection .HeroContents .line1 {
+  .HeroSection .HeroContents {
     height: 60px;
   }
   .HeroSection .HeroContents .line2 {
@@ -925,10 +966,11 @@ svg {
     border-radius: 0;
     width: 100%;
     padding-bottom: 0;
+     
   }
   .HeroSection .Services {
     margin-bottom: 2em;
-    justify-content: center;
+     
   }
   .CollectionSection
     .row
@@ -1018,6 +1060,66 @@ svg {
   }
   .modal-content .modal-body {
     padding: 1.5em 2em;
+  }
+}
+/* Extra breakpoint for small mobiles */
+@media (max-width: 480px) {
+  .HeroSection .carouselNumbersParent {
+    height: 100vh;   /* reduce height slightly */
+    left: 0;        /* align properly */
+  }
+
+  .HeroSection .carousel .carousel-inner > .carousel-item {
+    height: 45vh;   /* keep aspect ratio, avoid shrink */
+
+  }
+
+  .HeroSection .carousel .carousel-inner {
+    width: 200% !important;   /* keep aspect ratio, avoid shrink */
+  }
+
+  .HeroSection .HeroContents {
+    top: 20%;       /* push text down more */
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .HeroSection .HeroContents .line1 {
+    height: 35px;
+  }
+
+  .HeroSection .HeroContents .line2 {
+    height: 60px;
+  }
+
+  .HeroSection .mianHeading {
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+
+  .recommendedHeading {
+    font-size: 1em;
+  }
+
+  .CarouselSection .productCardImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .CarouselSection .slick-prev {
+    left: 4px;
+  }
+
+  .CarouselSection .slick-next {
+    right: 8px;
+  }
+
+  .LoginNavbar {
+    padding: 1em 0 0.6em 0;
+  }
+
+  .modal-content .modal-body {
+    padding: 1em;
   }
 }
 
